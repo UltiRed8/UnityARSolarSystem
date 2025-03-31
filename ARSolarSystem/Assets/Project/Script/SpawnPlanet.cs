@@ -47,7 +47,7 @@ public class SpawnPlanet : MonoBehaviour
         {
             if(planet.name == _name)
             {
-                planet.SetActive(false);
+                planet.SetActive(true);
             }
         }
     }
