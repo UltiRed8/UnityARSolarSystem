@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GravityManager : MonoBehaviour
 {
-    [SerializeField] float g = 100f;
+    [SerializeField] float g = 1f;
     [SerializeField] GameObject[] planets;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,7 @@ public class GravityManager : MonoBehaviour
         {
             Debug.Log(_planet.name);
         }
+        InitialVelocity();
     }
 
     // Update is called once per frame
@@ -44,7 +45,23 @@ public class GravityManager : MonoBehaviour
                 float _massB = _rigidbodyB.mass;
                 float _distance = Vector3.Distance(_planetAPos, _planetBPos);
 
-                _planetA.GetComponent<Rigidbody>().AddForce((_planetBPos - _planetAPos).normalized * (g * (_massA * _massB) / (_distance * _distance)));
+                _rigidbodyA.AddForce((_planetBPos - _planetAPos).normalized * (g * (_massA * _massB) / (_distance * _distance)));
+            }
+        }
+    }
+
+    void InitialVelocity()
+    {
+        foreach (GameObject _planetA in planets)
+        {
+            foreach (GameObject _planetB in planets)
+            {
+                if( _planetA == _planetB) continue;
+                float _massB = _planetB.GetComponent<Rigidbody>().mass;
+                float _distance = Vector3.Distance(_planetA.transform.position, _planetB.transform.position);
+                _planetA.transform.LookAt(_planetB.transform);
+
+                _planetA.GetComponent<Rigidbody>().velocity += _planetA.transform.right * Mathf.Sqrt((g * _massB) / _distance);
             }
         }
     }
