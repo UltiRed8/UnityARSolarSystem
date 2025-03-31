@@ -7,10 +7,11 @@ using UnityEngine.XR.ARSubsystems;
 public class SpawnPlanet : MonoBehaviour
 {
     [SerializeField] ARTrackedImageManager manager;
+    [SerializeField] List<GameObject> planets = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
-        manager.trackedImagesChanged += SpawnPlanetWithImage;
+        Init();
     }
 
     // Update is called once per frame
@@ -21,14 +22,33 @@ public class SpawnPlanet : MonoBehaviour
 
     private void OnDestroy()
     {
-        manager.trackedImagesChanged -= SpawnPlanetWithImage;
+        manager.trackedImagesChanged -= DetectPlanetToSpawn;
     }
 
-    void SpawnPlanetWithImage(ARTrackedImagesChangedEventArgs _image)
+    void Init()
+    {
+        manager = GetComponent<ARTrackedImageManager>();
+        if (!manager) return;
+        manager.trackedImagesChanged += DetectPlanetToSpawn;
+    }
+
+    void DetectPlanetToSpawn(ARTrackedImagesChangedEventArgs _image)
     {
         foreach (ARTrackedImage _trackedImage in _image.added)
         {
             Debug.Log(_trackedImage.referenceImage.name);
+            SpawnPlanetWithName(_trackedImage.referenceImage.name);
+        }
+    }
+
+    void SpawnPlanetWithName(string _name)
+    {
+        foreach (GameObject planet in planets)
+        {
+            if(planet.name == _name)
+            {
+                planet.SetActive(false);
+            }
         }
     }
 }

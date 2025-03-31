@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
   m_Name: RIL_Planet
   m_EditorClassIdentifier: 
-  m_GuidLow: 0
-  m_GuidHigh: 0
+  m_GuidLow: 5045170782683370341
+  m_GuidHigh: 3283649219535324858
   m_DataStore:
     m_Storage: []
   m_Images:
@@ -35,7 +35,7 @@ MonoBehaviour:
       m_GuidHigh: 12360655021090773544
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Mercure
+    m_Name: Mercury
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5595498090255021148
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_GuidHigh: 7309110444263090843
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: PlanetTerre
+    m_Name: Earth
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5204770219965323597
@@ -55,7 +55,7 @@ MonoBehaviour:
       m_GuidHigh: 15185062231191349913
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Saturne
+    m_Name: Saturn
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5764464907772761983
