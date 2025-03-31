@@ -21,9 +21,6 @@ public class InteractionTest : MonoBehaviour
         Vector2 _hitPosition = _context.ReadValue<Vector2>();
         Ray _ray = playerCamera.ScreenPointToRay(_hitPosition);
         if (Physics.Raycast(_ray, out RaycastHit _hit, 1000.0f, layerToDetect))
-        {
-            Debug.Log("Detected: " + _hit.rigidbody.gameObject.name);
-            Destroy(_hit.rigidbody.gameObject);
-        }
+            _hit.collider.gameObject.SetActive(false);
     }
 }
