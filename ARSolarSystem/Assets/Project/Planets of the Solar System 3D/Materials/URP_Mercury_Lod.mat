@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-402928879279770965
+--- !u!114 &-7205874988629490552
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,9 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: URP_Moon_Lod
-  m_Shader: {fileID: -6465566751694194690, guid: 9613165056b174b1c95b1c3ddf7a2d1a,
-    type: 3}
+  m_Name: URP_Mercury_Lod
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -39,11 +38,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_CFCAFFE9:
-        m_Texture: {fileID: 2800000, guid: ed72c23d28c714738bace7abf3ce7787, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37071c04cf8964e609d0b9777a4e7430, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: ed72c23d28c714738bace7abf3ce7787, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37071c04cf8964e609d0b9777a4e7430, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -67,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ed72c23d28c714738bace7abf3ce7787, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37071c04cf8964e609d0b9777a4e7430, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -102,7 +101,7 @@ Material:
     m_Floats:
     - Vector1_35835FF7: 0
     - Vector1_85489963: 0
-    - Vector1_A01F3A73: 5
+    - Vector1_A01F3A73: 3
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -132,7 +131,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - Color_B354DC38: {r: 1, g: 1, b: 1, a: 0}
+    - Color_B354DC38: {r: 0.7924528, g: 0.70627004, b: 0.42239228, a: 0}
     - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -7,9 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: URP_Jupiter_Lod
-  m_Shader: {fileID: -6465566751694194690, guid: 9613165056b174b1c95b1c3ddf7a2d1a,
-    type: 3}
+  m_Name: URP_Venus_Lod
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -26,11 +25,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_CFCAFFE9:
-        m_Texture: {fileID: 2800000, guid: 708cd200decec43bab96adffb37942e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 801773570d3c3432fa626d8c3f3d4d0c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 708cd200decec43bab96adffb37942e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 801773570d3c3432fa626d8c3f3d4d0c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -54,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 708cd200decec43bab96adffb37942e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 801773570d3c3432fa626d8c3f3d4d0c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -89,7 +88,7 @@ Material:
     m_Floats:
     - Vector1_35835FF7: 0
     - Vector1_85489963: 0
-    - Vector1_A01F3A73: 5
+    - Vector1_A01F3A73: 2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -119,14 +118,14 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - Color_B354DC38: {r: 0.38679248, g: 0.3265548, b: 0.22441262, a: 0}
+    - Color_B354DC38: {r: 0.8301887, g: 0.506365, b: 0.33285868, a: 0}
     - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3037764321876128760
+--- !u!114 &9203110660746283840
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
