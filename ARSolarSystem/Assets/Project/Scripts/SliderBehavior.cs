@@ -33,11 +33,11 @@ public class SliderBehavior : MonoBehaviour
 
     void UpdateSlider()
     {
-        float _left = 1.0f - sliderValue;
-        background.uvRect = new Rect(new Vector2(0.0f, 0.0f),new Vector2(sliderValue, 1.0f));
-        background.rectTransform.anchorMax = new Vector2(sliderValue, 1.0f);
+        float _sliderValue = sliderValue / slider.maxValue;
+        background.uvRect = new Rect(new Vector2(0.0f, 0.0f),new Vector2(_sliderValue, 1.0f));
+        background.rectTransform.anchorMax = new Vector2(_sliderValue, 1.0f);
 
-        foreground.uvRect = new Rect(new Vector2(sliderValue, 0.0f), new Vector2(1.0f - sliderValue, 1.0f));
-        foreground.rectTransform.anchorMin = new Vector2(sliderValue, 0.0f);
+        foreground.uvRect = new Rect(new Vector2(_sliderValue, 0.0f), new Vector2(1.0f - _sliderValue, 1.0f));
+        foreground.rectTransform.anchorMin = new Vector2(_sliderValue, 0.0f);
     }
 }
