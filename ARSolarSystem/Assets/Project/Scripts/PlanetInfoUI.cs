@@ -10,9 +10,16 @@ public class PlanetInfoUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI SunDistValueText;
     [SerializeField] TextMeshProUGUI SunDistText;
     [SerializeField] PlanetInfo planetInfo;
+    [SerializeField] InteractionBehaviour intract;
 
     public PlanetInfo PlanetInfo {  get { return planetInfo; } set { planetInfo = value; } }
-    
+
+    private void Start()
+    {
+        if (!intract) return;
+        intract.interactedWithPlanet += UpdatePLanetInfoUI;
+    }
+
     public void UpdatePLanetInfoUI(PlanetInfo _planetInfo = null)
     {
         if (!_planetInfo)
