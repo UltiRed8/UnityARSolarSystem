@@ -770,7 +770,6 @@ GameObject:
   - component: {fileID: 27937959780290412}
   - component: {fileID: 7121422435269451332}
   - component: {fileID: 5713332585456643165}
-  - component: {fileID: 514844988516204500}
   m_Layer: 5
   m_Name: PanelUIInfoPlanet
   m_TagString: Untagged
@@ -838,18 +837,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!156049354 &514844988516204500
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6202476091730494834}
-  m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 1}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 0
 --- !u!1 &6666340461211796957
 GameObject:
   m_ObjectHideFlags: 0
