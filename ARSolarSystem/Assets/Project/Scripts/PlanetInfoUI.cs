@@ -18,10 +18,15 @@ public class PlanetInfoUI : MonoBehaviour
     {
         if (!intract) return;
         intract.interactedWithPlanet += UpdatePLanetInfoUI;
+        gameObject.SetActive(false);
     }
 
     public void UpdatePLanetInfoUI(PlanetInfo _planetInfo = null)
     {
+        if(!gameObject.activeInHierarchy)
+            gameObject.SetActive(true);
+
+
         if (!_planetInfo)
         {
             if (!planetInfo) return;
