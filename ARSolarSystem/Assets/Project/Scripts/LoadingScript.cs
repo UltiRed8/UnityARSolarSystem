@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +12,9 @@ public class LoadingScript : MonoBehaviour
     [SerializeField] float rotationAnimationSpeed = 1.0f;
     [SerializeField] float dotDelay = 0.5f;
     [SerializeField] int maxDots = 3;
+    [SerializeField] List<string> loadingTexts = new List<string>();
     float currentDelay = 0.0f;
+    string loadingText = "";
     int dots = 0;
 
     void Start()
@@ -28,6 +27,7 @@ public class LoadingScript : MonoBehaviour
     {
         currentDelay = 0.0f;
         dots = 0;
+        loadingText = loadingTexts[Random.Range(0, loadingTexts.Count - 1)];
         UpdateText();
         isLoading = true;
     }
@@ -59,7 +59,7 @@ public class LoadingScript : MonoBehaviour
 
     private void UpdateText()
     {
-        string _text = "Loading";
+        string _text = loadingText;
         for (int _index = 0; _index < dots; _index++)
             _text += ".";
         text.text = _text;
