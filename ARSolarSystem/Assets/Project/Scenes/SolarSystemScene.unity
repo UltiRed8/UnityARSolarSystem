@@ -251,8 +251,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3281811885339201356, guid: 77bf900fbf45d6249b7d50eefc9f89be,
         type: 3}
+      propertyPath: m_MaxValue
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281811885339201356, guid: 77bf900fbf45d6249b7d50eefc9f89be,
+        type: 3}
       propertyPath: m_WholeNumbers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4293234419662273750, guid: 77bf900fbf45d6249b7d50eefc9f89be,
         type: 3}
