@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Project/Scenes/SolarSystemScene.unity
     guid: 22e692c55c26d1545ad66d659e65f791
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/Nicolas.unity
     guid: e13753685b17eb14f809cb1fc9e7ce2d
   m_configObjects:
