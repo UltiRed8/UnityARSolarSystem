@@ -29,6 +29,7 @@ public class PlanetManager : Singleton<PlanetManager>
     public void SetTimeScale(float _sliderValue)
     {
         timeScale = ((_sliderValue - 0.5f) * maxTimeScale) * 2.0f;
+        onTimeScaleChanged?.Invoke(timeScale);
     }
     
 
