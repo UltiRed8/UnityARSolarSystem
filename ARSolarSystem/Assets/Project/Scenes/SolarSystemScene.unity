@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &153026986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8060,7 +8060,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.25
+  m_fontSize: 25.25
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8968,7 +8968,7 @@ PrefabInstance:
     - target: {fileID: 27937959780290412, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 27937959780290412, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
         type: 3}
@@ -9048,7 +9048,7 @@ PrefabInstance:
     - target: {fileID: 6202476091730494834, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6619470084690963107, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
         type: 3}
