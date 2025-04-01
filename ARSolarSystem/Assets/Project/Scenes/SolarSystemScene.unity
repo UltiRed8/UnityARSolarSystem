@@ -8899,6 +8899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelUIInfoPlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 6202476091730494834, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6619470084690963107, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
         type: 3}
       propertyPath: intract
