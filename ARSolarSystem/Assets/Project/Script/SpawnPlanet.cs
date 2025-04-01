@@ -27,8 +27,8 @@ public class SpawnPlanet : MonoBehaviour
 
     void Init()
     {
-        manager = GetComponent<ARTrackedImageManager>();
-        if (!manager) return;
+        if (!manager)
+            return;
         manager.trackedImagesChanged += DetectPlanetToSpawn;
     }
 
