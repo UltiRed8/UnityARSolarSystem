@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlanetInfoUI : MonoBehaviour
 {
@@ -11,14 +12,17 @@ public class PlanetInfoUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI SunDistText;
     [SerializeField] PlanetInfo planetInfo;
     [SerializeField] InteractionBehaviour intract;
+    [SerializeField] Button removeButton;
 
     public PlanetInfo PlanetInfo {  get { return planetInfo; } set { planetInfo = value; } }
 
     private void Start()
     {
         gameObject.SetActive(false);
-        if (!intract) return;
-        intract.interactedWithPlanet += UpdatePLanetInfoUI;
+        if (intract)
+            intract.interactedWithPlanet += UpdatePLanetInfoUI;
+        if (removeButton)
+            removeButton.onClick.AddListener(RemoveUI);
     }
 
     public void UpdatePLanetInfoUI(PlanetInfo _planetInfo = null)
@@ -50,6 +54,11 @@ public class PlanetInfoUI : MonoBehaviour
         {
             SunDistValueText.text = _planetInfo.Distance.ToString() + " Km";
         }
+    }
+
+    void RemoveUI()
+    {
+        gameObject.SetActive(false);
     }
 }
 
