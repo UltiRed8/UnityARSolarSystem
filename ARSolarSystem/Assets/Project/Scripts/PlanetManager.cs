@@ -7,8 +7,9 @@ public class PlanetManager : Singleton<PlanetManager>
 {
     [SerializeField] List<PlanetBehavior> planetBehaviors;
     [SerializeField] float multiplier = 1f;
+    [SerializeField] float maxTimeScale = 10f;
+    [SerializeField] float timeScale = 1f;
     event Action<float> onTimeScaleChanged;
-    float timeScale = 1f;
 
     private void Start()
     {
@@ -25,17 +26,9 @@ public class PlanetManager : Singleton<PlanetManager>
         }
     }
 
-    public float TimeScale {
-        get
-        {
-            return timeScale;
-        }
-
-        set 
-        { 
-            timeScale = value;
-            onTimeScaleChanged?.Invoke(timeScale);
-        }
+    public void SetTimeScale(float _sliderValue)
+    {
+        timeScale = ((_sliderValue - 0.5f) * maxTimeScale) * 2.0f;
     }
     
 
