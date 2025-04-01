@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1075034882336646565}
   - component: {fileID: 2959860824389575498}
   - component: {fileID: 8060804003534526186}
+  - component: {fileID: 2207417845099173261}
   m_Layer: 6
   m_Name: Uranus
   m_TagString: TrackingObject
@@ -182,6 +183,22 @@ MonoBehaviour:
   radius: 30
   angle: 0
   isRevert: 0
+--- !u!114 &2207417845099173261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014736895960144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3355fcaadcd8cd04cb9133fe01650ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetName: Earth
+  planetSize: 6378
+  sunDistance: 149597870
+  isAMoon: 0
 --- !u!1 &1096564875544702
 GameObject:
   m_ObjectHideFlags: 0

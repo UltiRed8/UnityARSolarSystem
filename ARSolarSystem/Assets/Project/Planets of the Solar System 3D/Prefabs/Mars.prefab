@@ -4856,6 +4856,7 @@ GameObject:
   - component: {fileID: 6789804957547789107}
   - component: {fileID: 3643660406493008246}
   - component: {fileID: 6549418880365733996}
+  - component: {fileID: 6122098507797625708}
   m_Layer: 6
   m_Name: Mars
   m_TagString: TrackingObject
@@ -5026,6 +5027,22 @@ MonoBehaviour:
   radius: 14
   angle: 0
   isRevert: 0
+--- !u!114 &6122098507797625708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288793558353234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3355fcaadcd8cd04cb9133fe01650ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetName: Earth
+  planetSize: 6378
+  sunDistance: 149597870
+  isAMoon: 0
 --- !u!1 &1299526964348990
 GameObject:
   m_ObjectHideFlags: 0

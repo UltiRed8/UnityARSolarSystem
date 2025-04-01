@@ -4941,6 +4941,7 @@ GameObject:
   - component: {fileID: 6353123651212667173}
   - component: {fileID: 5308191779234704445}
   - component: {fileID: 2525762522455297956}
+  - component: {fileID: 6820394958227717993}
   m_Layer: 6
   m_Name: Moon
   m_TagString: Untagged
@@ -5111,6 +5112,22 @@ MonoBehaviour:
   radius: 2
   angle: 0
   isRevert: 0
+--- !u!114 &6820394958227717993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408581670749804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3355fcaadcd8cd04cb9133fe01650ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetName: Earth
+  planetSize: 6378
+  sunDistance: 149597870
+  isAMoon: 0
 --- !u!1 &1461827109007070
 GameObject:
   m_ObjectHideFlags: 0

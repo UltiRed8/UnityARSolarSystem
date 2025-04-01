@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InteractionTest : MonoBehaviour
+public class InteractionBehaviour : MonoBehaviour
 {
+    event Action<GameObject> interactedWithGameObject = null;
+    event Action<PlanetInfo> interactedWithPlanet = null;
+
     [SerializeField] Camera playerCamera = null;
     [SerializeField] IAA_Player inputs;
     [SerializeField] InputAction interactAction;
@@ -21,6 +25,11 @@ public class InteractionTest : MonoBehaviour
         Vector2 _hitPosition = _context.ReadValue<Vector2>();
         Ray _ray = playerCamera.ScreenPointToRay(_hitPosition);
         if (Physics.Raycast(_ray, out RaycastHit _hit, 1000.0f, layerToDetect))
-            _hit.collider.gameObject.SetActive(false);
+        {
+            //_hit.collider.gameObject.SetActive(false);
+            interactedWithGameObject?.Invoke(_hit.collider.gameObject);
+            PlanetInfo _info = _hit.collider.gameObject.GetComponent<PlanetInfo>();
+            interactedWithPlanet?.Invoke(_info);
+        }
     }
 }

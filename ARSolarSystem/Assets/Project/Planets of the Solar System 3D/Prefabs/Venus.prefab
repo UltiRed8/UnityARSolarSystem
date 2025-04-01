@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 4182879556056083133}
   - component: {fileID: 5768975855979325945}
   - component: {fileID: 6779622690577450645}
+  - component: {fileID: 1870944674364524949}
   m_Layer: 6
   m_Name: Venus
   m_TagString: TrackingObject
@@ -267,6 +268,22 @@ MonoBehaviour:
   radius: 8
   angle: 0
   isRevert: 0
+--- !u!114 &1870944674364524949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647581975099426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3355fcaadcd8cd04cb9133fe01650ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetName: Earth
+  planetSize: 6378
+  sunDistance: 149597870
+  isAMoon: 0
 --- !u!1 &1741346461429698
 GameObject:
   m_ObjectHideFlags: 0
