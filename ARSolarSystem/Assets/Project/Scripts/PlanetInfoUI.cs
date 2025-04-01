@@ -10,9 +10,16 @@ public class PlanetInfoUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI SunDistValueText;
     [SerializeField] TextMeshProUGUI SunDistText;
     [SerializeField] PlanetInfo planetInfo;
+    [SerializeField] InteractionBehaviour intract;
 
     public PlanetInfo PlanetInfo {  get { return planetInfo; } set { planetInfo = value; } }
-    
+
+    private void Start()
+    {
+        if (!intract) return;
+        intract.interactedWithPlanet += UpdatePLanetInfoUI;
+    }
+
     public void UpdatePLanetInfoUI(PlanetInfo _planetInfo = null)
     {
         if (!_planetInfo)
@@ -23,20 +30,20 @@ public class PlanetInfoUI : MonoBehaviour
         
         if (planetNameText)
         {
-            planetNameText.text = PlanetInfo.PlanetName;
+            planetNameText.text = _planetInfo.PlanetName;
         }
         if(planetSizeText)
         {
-            planetSizeText.text = PlanetInfo.PlanetSize.ToString() + " Km";
+            planetSizeText.text = _planetInfo.PlanetSize.ToString() + " Km";
         }
 
         if (SunDistText)
         {
-            SunDistText.text = PlanetInfo.IsAMoon ? "Planet Dist:" : "Sun Dist:";
+            SunDistText.text = _planetInfo.IsAMoon ? "Planet Dist:" : "Sun Dist:";
         }
         if (SunDistValueText)
         {
-            SunDistValueText.text = PlanetInfo.SunDistance.ToString() + " Km";
+            SunDistValueText.text = _planetInfo.SunDistance.ToString() + " Km";
         }
     }
 }

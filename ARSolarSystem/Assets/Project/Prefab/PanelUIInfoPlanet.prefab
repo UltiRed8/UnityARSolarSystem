@@ -770,6 +770,7 @@ GameObject:
   - component: {fileID: 27937959780290412}
   - component: {fileID: 7121422435269451332}
   - component: {fileID: 5713332585456643165}
+  - component: {fileID: 6619470084690963107}
   m_Layer: 5
   m_Name: PanelUIInfoPlanet
   m_TagString: Untagged
@@ -837,6 +838,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6619470084690963107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202476091730494834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7846dabe6a14e714d91cfac2aca8c672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetNameText: {fileID: 8988829509488620044}
+  planetSizeText: {fileID: 7268662100074504760}
+  SunDistValueText: {fileID: 4218615606706682935}
+  SunDistText: {fileID: 4033896789755634585}
+  planetInfo: {fileID: 0}
+  intract: {fileID: 0}
 --- !u!1 &6666340461211796957
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +888,7 @@ RectTransform:
   - {fileID: 3336439845324228222}
   m_Father: {fileID: 27937959780290412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.01, y: 0.35}
+  m_AnchorMin: {x: 0, y: 0.35}
   m_AnchorMax: {x: 1, y: 0.65}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
