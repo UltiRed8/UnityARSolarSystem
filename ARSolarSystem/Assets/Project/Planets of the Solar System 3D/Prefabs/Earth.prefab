@@ -5126,7 +5126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetName: Earth
   planetSize: 6378
-  sunDistance: 149597870
+  distance: 149600000
   isAMoon: 0
 --- !u!1 &1982611864615202
 GameObject:

@@ -43,7 +43,7 @@ public class PlanetInfoUI : MonoBehaviour
         }
         if (SunDistValueText)
         {
-            SunDistValueText.text = _planetInfo.SunDistance.ToString() + " Km";
+            SunDistValueText.text = _planetInfo.Distance.ToString() + " Km";
         }
     }
 }

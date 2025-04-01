@@ -281,9 +281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3355fcaadcd8cd04cb9133fe01650ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Earth
-  planetSize: 6378
-  sunDistance: 149597870
+  planetName: Saturn
+  planetSize: 58232
+  distance: 1.434e+9
   isAMoon: 0
 --- !u!1 &1445422062220386
 GameObject:

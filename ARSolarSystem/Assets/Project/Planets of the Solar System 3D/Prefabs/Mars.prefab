@@ -5039,9 +5039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3355fcaadcd8cd04cb9133fe01650ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Earth
-  planetSize: 6378
-  sunDistance: 149597870
+  planetName: Mars
+  planetSize: 3389.5
+  distance: 227900000
   isAMoon: 0
 --- !u!1 &1299526964348990
 GameObject:
