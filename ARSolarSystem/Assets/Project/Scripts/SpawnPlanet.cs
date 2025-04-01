@@ -36,7 +36,6 @@ public class SpawnPlanet : MonoBehaviour
     {
         foreach (ARTrackedImage _trackedImage in _image.added)
         {
-            Debug.Log(_trackedImage.referenceImage.name);
             SpawnPlanetWithName(_trackedImage.referenceImage.name);
         }
     }

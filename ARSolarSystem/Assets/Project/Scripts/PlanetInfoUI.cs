@@ -16,9 +16,9 @@ public class PlanetInfoUI : MonoBehaviour
 
     private void Start()
     {
+        gameObject.SetActive(false);
         if (!intract) return;
         intract.interactedWithPlanet += UpdatePLanetInfoUI;
-        gameObject.SetActive(false);
     }
 
     public void UpdatePLanetInfoUI(PlanetInfo _planetInfo = null)
