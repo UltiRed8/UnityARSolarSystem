@@ -1,19 +1,15 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetManager : Singleton<PlanetManager>
 {
     [SerializeField] List<PlanetBehavior> planetBehaviors;
-    [SerializeField] float multiplier = 1.0f;
-    [SerializeField] float timeScale = 0.0f;
+    [SerializeField] float multiplier = 1f;
+    [SerializeField] float maxTimeScale = 10f;
+    [SerializeField] float timeScale = 1f;
     event Action<float> onTimeScaleChanged;
-
-    public void SetTimescale(float _newValue)
-    {
-        timeScale = _newValue;
-        onTimeScaleChanged?.Invoke(timeScale);
-    }
 
     private void Start()
     {
@@ -28,8 +24,13 @@ public class PlanetManager : Singleton<PlanetManager>
         {
             _behavior.UpdateWithMultiplier(multiplier);
         }
-        SetTimescale(timeScale);
     }
+
+    public void SetTimeScale(float _sliderValue)
+    {
+        timeScale = ((_sliderValue - 0.5f) * maxTimeScale) * 2.0f;
+    }
+    
 
     public void Add(PlanetBehavior _behavior)
     {
