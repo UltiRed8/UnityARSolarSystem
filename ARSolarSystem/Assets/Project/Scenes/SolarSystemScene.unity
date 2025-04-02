@@ -8947,6 +8947,51 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -650
       objectReference: {fileID: 0}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1597320626}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2800000, guid: eb985d171a98efb41b2d1198d86998bf, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 94e057fc0f8d73a469bf1a8a856b90e4, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2800000, guid: e22778155f7cc704dbb5d15330dbba7a, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 2cfedfb7fd4f7ba4c96c02b7bcb21709, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 72bb1e4badf229c498cb697695730d61, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 3aa6525e839b9ca47af8c0f55fc41c9b, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 3014a60ad87dc234c9f0f1d26e6d7cb5, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: 'questionsImages.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 23af23ff21fb8ff4dbc6a73b7c2059dd, type: 3}
     - target: {fileID: 7979396696572240575, guid: 67c881b994f9b3a40bfd89b4a7181087,
         type: 3}
       propertyPath: m_Pivot.x

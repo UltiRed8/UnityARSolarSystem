@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.ARFoundation;
 
 public class MiniGame : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class MiniGame : MonoBehaviour
     [SerializeField] List<Texture> questionsImages = null;
     [SerializeField] List<Texture> answersImages = null;
     [SerializeField] float delayBetweenQuestions = 0.5f;
+
+    //Detection
+    [SerializeField] ARTrackedImageManager manager;
+
     int currentQuestionIndex = 0;
     int currentDelay = 30;
     int currentScore = 0;
@@ -27,6 +32,9 @@ public class MiniGame : MonoBehaviour
         currentDelay = delay;
         InvokeRepeating(nameof(UpdateTime), 1.0f, 1.0f);
         SelectRandomQuestion();
+
+        if (manager)
+            manager.trackedImagesChanged += CheckAnswer;
     }
 
     private void UpdateTime()
@@ -56,10 +64,19 @@ public class MiniGame : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void CheckAnswer()
+    private void CheckAnswer(ARTrackedImagesChangedEventArgs _image)
     {
         // check if answer texture index is the same as the question
-        Success();
+
+        foreach (ARTrackedImage _trackedImage in _image.added)
+        {
+            if(_trackedImage.referenceImage.name == currentQuestionIndex.ToString())
+            {
+                Success();
+                return;
+            }
+        }
+
         Failed();
     }
 
