@@ -57,6 +57,7 @@ public class SelectPosSolarSystem : MonoBehaviour
             Vector3 _direction = (_pose.position - playerTransform.position).normalized;
             solarSystem.transform.position = playerTransform.position + _direction * 10.0f;
             ActiveUI();
+            DisablePlanes();
         }
     }
 
@@ -67,5 +68,12 @@ public class SelectPosSolarSystem : MonoBehaviour
             _ui.SetActive(true);
         }
         gameObject.SetActive(false);
+    }
+
+    void DisablePlanes()
+    {
+        foreach (ARPlane _plane in planeManager.trackables)
+            Destroy(_plane);
+        Destroy(planeManager);
     }
 }
