@@ -8532,6 +8532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomSpaceSkybox
       objectReference: {fileID: 0}
+    - target: {fileID: 6593447777589874897, guid: f348487428b9c334793cfcc7e6e8c3bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
