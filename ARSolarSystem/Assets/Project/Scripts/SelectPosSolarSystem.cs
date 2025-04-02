@@ -64,5 +64,6 @@ public class SelectPosSolarSystem : MonoBehaviour
         {
             _ui.SetActive(true);
         }
+        gameObject.SetActive(false);
     }
 }
