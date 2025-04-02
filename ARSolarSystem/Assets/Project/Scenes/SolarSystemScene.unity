@@ -616,6 +616,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1746850852}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &277809833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6202476091730494834, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998310092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371839731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,6 +2159,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3145384789464545431, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: skyboxObject
+      value: 
+      objectReference: {fileID: 1221851341}
     - target: {fileID: 4291868916778045571, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
       propertyPath: m_fontSize
@@ -2789,6 +2800,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4024914263291546, guid: 835acc1a9ebe24c0fa3854c99346f9cd,
     type: 3}
   m_PrefabInstance: {fileID: 1130885393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1221851341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6593447777589874897, guid: f348487428b9c334793cfcc7e6e8c3bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589849761}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255628033
 GameObject:
@@ -9811,7 +9828,7 @@ PrefabInstance:
     - target: {fileID: 5918831087921838274, guid: aa62917631d738240970bc4205901518,
         type: 3}
       propertyPath: allUIToActive.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5918831087921838274, guid: aa62917631d738240970bc4205901518,
         type: 3}
@@ -9823,6 +9840,11 @@ PrefabInstance:
       propertyPath: 'allUIToActive.Array.data[1]'
       value: 
       objectReference: {fileID: 237131860}
+    - target: {fileID: 5918831087921838274, guid: aa62917631d738240970bc4205901518,
+        type: 3}
+      propertyPath: 'allUIToActive.Array.data[2]'
+      value: 
+      objectReference: {fileID: 277809833}
     - target: {fileID: 8322772897395595103, guid: aa62917631d738240970bc4205901518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10102,7 +10124,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1998310092}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 277809833}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7846dabe6a14e714d91cfac2aca8c672, type: 3}
