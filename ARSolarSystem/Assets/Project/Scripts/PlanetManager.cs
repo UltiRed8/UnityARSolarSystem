@@ -18,13 +18,7 @@ public class PlanetManager : Singleton<PlanetManager>
             placeSolarSystem.OnPlaceSolarSystem += () =>
             {
                 Invoke(nameof(Apply), 0.0f);
-                Invoke(nameof(InitSpeed), 0.0f);
             };
-    }
-
-    private void InitSpeed()
-    {
-        SetTimeScale(20);
     }
 
     void Apply()
