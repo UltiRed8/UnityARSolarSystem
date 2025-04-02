@@ -9,11 +9,21 @@ public class PlanetManager : Singleton<PlanetManager>
     [SerializeField] float multiplier = 1f;
     [SerializeField] float maxTimeScale = 10f;
     [SerializeField] float timeScale = 1f;
+    [SerializeField] SelectPosSolarSystem placeSolarSystem = null;
     event Action<float> onTimeScaleChanged;
 
     private void Start()
     {
-        Invoke(nameof(Apply),0.0f);
+        if (placeSolarSystem)
+            placeSolarSystem.OnPlaceSolarSystem += () =>
+            {
+                Invoke(nameof(Apply), 0.0f);
+                Invoke(nameof(InitSpeed), 0.0f);
+            };
+    }
+
+    private void InitSpeed()
+    {
         SetTimeScale(20);
     }
 

@@ -22,6 +22,8 @@ public class MiniGame : MonoBehaviour
     public void StartGame()
     {
         currentScore = 0;
+        UpdateScoreText();
+        UpdateTimeText();
         currentDelay = delay;
         InvokeRepeating(nameof(UpdateTime), 1.0f, 1.0f);
         SelectRandomQuestion();
@@ -30,9 +32,14 @@ public class MiniGame : MonoBehaviour
     private void UpdateTime()
     {
         currentDelay--;
-        timeText.text = "Time: " + currentDelay;
-        if (delay <= 0)
+        UpdateTimeText();
+        if (currentDelay <= 0)
             EndGame();
+    }
+
+    private void UpdateTimeText()
+    {
+        timeText.text = "Time: " + currentDelay;
     }
 
     private void SelectRandomQuestion()
