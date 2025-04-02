@@ -2164,6 +2164,11 @@ PrefabInstance:
       propertyPath: skyboxObject
       value: 
       objectReference: {fileID: 1221851341}
+    - target: {fileID: 3145384789464545431, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: darkIRLbackground
+      value: 
+      objectReference: {fileID: 1075732300}
     - target: {fileID: 4291868916778045571, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
       propertyPath: m_fontSize
