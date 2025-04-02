@@ -20,6 +20,7 @@ public class PlanetManager : Singleton<PlanetManager>
     void Apply()
     {
         GameObject _sun = GameObject.FindGameObjectWithTag("Sun");
+        if (!_sun) return;
         _sun.transform.localScale *= multiplier;
         foreach (PlanetBehavior _behavior in planetBehaviors)
         {
