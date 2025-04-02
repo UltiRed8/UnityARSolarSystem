@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class MiniGamePanelBehavior : MonoBehaviour
@@ -9,6 +10,7 @@ public class MiniGamePanelBehavior : MonoBehaviour
     [SerializeField] MiniGame miniGame = null;
     [SerializeField] Text lastScoreText = null;
     [SerializeField] Text bestScoreText = null;
+    [SerializeField] AudioResource buttonPressSound = null;
 
     private void Start()
     {
@@ -33,12 +35,14 @@ public class MiniGamePanelBehavior : MonoBehaviour
 
     private void Play()
     {
+        SoundManager.Instance.PlaySound(buttonPressSound);
         miniGame.gameObject.SetActive(true);
         miniGame.StartGame();
     }
 
     private void ResetScore()
     {
+        SoundManager.Instance.PlaySound(buttonPressSound);
         if (!save)
             return;
         save.SetNewScore(0);
