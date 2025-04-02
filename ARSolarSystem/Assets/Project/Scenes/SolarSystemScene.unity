@@ -2600,7 +2600,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundSource: {fileID: 0}
   musicSource: {fileID: 1128178780}
-  globalVolume: 0.1
+  soundsVolume: 0.1
+  musicVolume: 0.5
 --- !u!82 &1128178780
 AudioSource:
   m_ObjectHideFlags: 0

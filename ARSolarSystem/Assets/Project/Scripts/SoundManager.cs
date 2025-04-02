@@ -7,14 +7,15 @@ public class SoundManager : Singleton<SoundManager>
 {
     [SerializeField] AudioSource soundSource;
     [SerializeField] AudioSource musicSource;
-    [SerializeField] float globalVolume;
+    [SerializeField] float soundsVolume;
+    [SerializeField] float musicVolume;
     bool soundIsToggle = false;
 
     private void Start()
     {
         soundSource = gameObject.AddComponent<AudioSource>();
-        soundSource.volume = globalVolume;
-        musicSource.volume = globalVolume;
+        soundSource.volume = soundsVolume;
+        musicSource.volume = musicVolume;
     }
 
 
@@ -33,7 +34,7 @@ public class SoundManager : Singleton<SoundManager>
     public void PlaySound(AudioResource _source, float _overrideVolume = -1.0f)
     {
         if (soundIsToggle) return;
-        soundSource.volume = _overrideVolume == -1.0f ? globalVolume : _overrideVolume;
+        soundSource.volume = _overrideVolume == -1.0f ? soundsVolume : _overrideVolume;
         soundSource.resource = _source;
         soundSource.Play();
     }
