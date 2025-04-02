@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class BackgroundButton : MonoBehaviour
@@ -15,6 +16,8 @@ public class BackgroundButton : MonoBehaviour
     [SerializeField] RawImage baseIRLImage;
 
     [SerializeField] GameObject darkIRLbackground;
+    [SerializeField] AudioResource soundToPlay;
+
 
     [SerializeField] int currentButton = 2;
 
@@ -31,6 +34,7 @@ public class BackgroundButton : MonoBehaviour
         currentButton = _index;
         SetColors();
         SetBackground();
+        SoundManager.Instance.PlaySound(soundToPlay);
     }
 
     void SetColors()
