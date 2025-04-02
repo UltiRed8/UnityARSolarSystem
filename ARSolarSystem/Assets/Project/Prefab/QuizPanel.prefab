@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 7979396696572240575}
   - component: {fileID: 5144899634808383803}
   - component: {fileID: 820920282298498476}
-  - component: {fileID: 4761686074328470153}
   - component: {fileID: 4070136349627473932}
   m_Layer: 0
   m_Name: QuizPanel
@@ -230,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7979396696572240575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -293,39 +292,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4761686074328470153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2501217302274759139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46092a8b8fe3e834aa237db5f000a03a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 6317315454142231233}
-  text: {fileID: 8451145145466970313}
-  delay: 5
-  isLoading: 0
-  rotationAnimationSpeed: 1
-  dotDelay: 0.4
-  maxDots: 3
-  loadingTexts:
-  - Loading
-  - Loading Raytracing (JK)
-  - Building planets
-  - Making universe
-  - Making cofee
-  - Waiting
-  - Launching
-  - Starting a rocket
-  - Building rocket
-  - 
-  - Generating dungeon
-  - Adding water?
-  - Sending help
 --- !u!114 &4070136349627473932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,8 +310,24 @@ MonoBehaviour:
   scoreText: {fileID: 6116824551648496580}
   questionImage: {fileID: 6317315454142231233}
   answerImage: {fileID: 6263746768152894964}
-  questionsImages: []
-  answersImages: []
+  questionsImages:
+  - {fileID: 2800000, guid: e22778155f7cc704dbb5d15330dbba7a, type: 3}
+  - {fileID: 2800000, guid: 72bb1e4badf229c498cb697695730d61, type: 3}
+  - {fileID: 2800000, guid: 2cfedfb7fd4f7ba4c96c02b7bcb21709, type: 3}
+  - {fileID: 2800000, guid: eb985d171a98efb41b2d1198d86998bf, type: 3}
+  - {fileID: 2800000, guid: 3014a60ad87dc234c9f0f1d26e6d7cb5, type: 3}
+  - {fileID: 2800000, guid: 23af23ff21fb8ff4dbc6a73b7c2059dd, type: 3}
+  - {fileID: 2800000, guid: 3aa6525e839b9ca47af8c0f55fc41c9b, type: 3}
+  - {fileID: 2800000, guid: 94e057fc0f8d73a469bf1a8a856b90e4, type: 3}
+  answersImages:
+  - {fileID: 2800000, guid: db19ec213e1c92a49aed86e9c8500e6f, type: 3}
+  - {fileID: 2800000, guid: 847b26958f78d9848a936a3dd4b4cf28, type: 3}
+  - {fileID: 2800000, guid: 0be59b8a3b1b41c41a8669efdb9b2f00, type: 3}
+  - {fileID: 2800000, guid: 7072386d755a575458f1cbc4f39d0057, type: 3}
+  - {fileID: 2800000, guid: 9b59db24bec503c409b86c02794fcc4a, type: 3}
+  - {fileID: 2800000, guid: 54d8918dff55b174aab70fb1b26bfca2, type: 3}
+  - {fileID: 2800000, guid: c49ba447075701d4bb70d93ea0141d5f, type: 3}
+  - {fileID: 2800000, guid: 9947e2b5f8e5f734992ba8ccecb76c58, type: 3}
   delayBetweenQuestions: 0.5
 --- !u!1 &5318625261355374784
 GameObject:
