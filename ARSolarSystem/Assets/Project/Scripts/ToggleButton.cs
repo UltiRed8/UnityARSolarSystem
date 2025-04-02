@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 [Serializable]
@@ -18,12 +19,14 @@ public class ToggleButton : MonoBehaviour
     [SerializeField] RawImage background;
     [SerializeField,HideInInspector] Color baseColor;
     [SerializeField] Color clickedColor;
-    [SerializeField] bool clicked;
+    [SerializeField] bool clicked = false;
+    [SerializeField] AudioResource soundToPlay;
     // Start is called before the first frame update
     void Start()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(ButtonToggle);
+        button.onClick.AddListener(() => SoundManager.Instance.PlaySound(soundToPlay));
         baseColor = background.color;
     }  
 
@@ -38,11 +41,11 @@ public class ToggleButton : MonoBehaviour
 
     void ToggleSound()
     {
-        
+        SoundManager.Instance.SetSoundToggle(clicked);
     }
 
     void ToggleMusic()
     {
-
+        SoundManager.Instance.SetMusicIsToggle(!clicked);
     }
 }

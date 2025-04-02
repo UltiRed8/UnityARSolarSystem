@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class BackgroundButton : MonoBehaviour
@@ -14,8 +15,9 @@ public class BackgroundButton : MonoBehaviour
     [SerializeField] RawImage darkIRLImage;
     [SerializeField] RawImage baseIRLImage;
 
-    [SerializeField] GameObject darkIRLBackground;
-    [SerializeField] GameObject skyboxBackground;
+    [SerializeField] GameObject darkIRLbackground;
+    [SerializeField] AudioResource soundToPlay;
+
 
     [SerializeField] int currentButton = 2;
 
@@ -32,6 +34,7 @@ public class BackgroundButton : MonoBehaviour
         currentButton = _index;
         SetColors();
         SetBackground();
+        SoundManager.Instance.PlaySound(soundToPlay);
     }
 
     void SetColors()
@@ -65,19 +68,16 @@ public class BackgroundButton : MonoBehaviour
 
     void SetSkybox()
     {
-        darkIRLBackground.SetActive(false);
-        skyboxBackground.SetActive(true);
+        darkIRLbackground.SetActive(false);
     }
 
     void SetDarkIRl()
     {
-        darkIRLBackground.SetActive(true);
-        skyboxBackground.SetActive(false);
+        darkIRLbackground.SetActive(true);
     }
 
     void SetBaseIRl()
     {
-        darkIRLBackground.SetActive(false);
-        skyboxBackground.SetActive(false);
+        darkIRLbackground.SetActive(false);
     }
 }

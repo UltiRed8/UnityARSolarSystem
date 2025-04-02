@@ -175,6 +175,7 @@ MonoBehaviour:
   darkIRLImage: {fileID: 2768658606068441919}
   baseIRLImage: {fileID: 919181752726723600}
   darkIRLbackground: {fileID: 0}
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
   currentButton: 2
 --- !u!1 &5240547961253447293
 GameObject:
@@ -1074,6 +1075,7 @@ MonoBehaviour:
   baseColor: {r: 0, g: 0, b: 0, a: 0}
   clickedColor: {r: 1, g: 0, b: 0, a: 1}
   clicked: 0
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!224 &2247652422971717079 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22400004, guid: 05a81c3d5091440058129444d28322f3,
@@ -1209,6 +1211,7 @@ MonoBehaviour:
   panelsToClose:
   - {fileID: 3100940553877811168}
   - {fileID: 2795774950783987790}
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!224 &3620945746983136543 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22400004, guid: 05a81c3d5091440058129444d28322f3,
@@ -1630,6 +1633,7 @@ MonoBehaviour:
   panelsToClose:
   - {fileID: 2795774950783987790}
   - {fileID: 6867802815020267502}
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!1001 &6223992972815616570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1882,12 +1886,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58550ddfd61eae4a9810d20cd0d10ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundType: 0
+  soundType: 1
   button: {fileID: 0}
   background: {fileID: 7139814285104829310}
   baseColor: {r: 0, g: 0, b: 0, a: 0}
   clickedColor: {r: 1, g: 0, b: 0, a: 1}
   clicked: 0
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!1 &7716755059878817847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 05a81c3d5091440058129444d28322f3,
@@ -2067,6 +2072,7 @@ MonoBehaviour:
   panelToOpen: {fileID: 0}
   panelsToClose:
   - {fileID: 5240547961253447293}
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!224 &8296984680147561636 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22400004, guid: 05a81c3d5091440058129444d28322f3,
@@ -2226,6 +2232,7 @@ MonoBehaviour:
   panelsToClose:
   - {fileID: 3100940553877811168}
   - {fileID: 6867802815020267502}
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!224 &9057454745653217491 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22400004, guid: 05a81c3d5091440058129444d28322f3,
