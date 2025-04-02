@@ -7,6 +7,7 @@ public class TutoUI : MonoBehaviour
 {
     [SerializeField] List<string> tutoList = new List<string>();
     [SerializeField] TextMeshProUGUI textTuto;
+    [SerializeField] SelectPosSolarSystem place;
     [SerializeField] InteractionBehaviour interact;
     [SerializeField] PlayerMovement move;
     [SerializeField] int timeTuto;
@@ -14,7 +15,7 @@ public class TutoUI : MonoBehaviour
 
     private void Start()
     {
-        Invoke("FirstTuto", timeTuto+5);
+        place.OnPlaceSolarSystem += FirstTuto;
     }
 
     public void ChangeText(string _text)
@@ -33,6 +34,7 @@ public class TutoUI : MonoBehaviour
     {
         ChangeText(tutoList[0]);
         interact.interactedWithPlanet += SwitchFirstTuto;
+        place.OnPlaceSolarSystem -= FirstTuto;
     }
 
     void SwitchFirstTuto(PlanetInfo _info)
@@ -51,7 +53,7 @@ public class TutoUI : MonoBehaviour
     void SwitchSecondTuto()
     {
         HideTuto();
-        Invoke("SecondTuto", timeTuto);
+        gameObject.SetActive(false);
         move.OnPlayerMovedForward -= SwitchSecondTuto;
 
     }

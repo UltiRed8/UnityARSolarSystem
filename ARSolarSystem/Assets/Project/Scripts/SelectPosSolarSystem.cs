@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
@@ -7,6 +8,8 @@ using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class SelectPosSolarSystem : MonoBehaviour
 {
+    public event Action OnPlaceSolarSystem;
+
     [SerializeField] ARPlaneManager planeManager;
     [SerializeField] ARRaycastManager raycastManager;
     [SerializeField] GameObject solarSystem;
@@ -56,6 +59,7 @@ public class SelectPosSolarSystem : MonoBehaviour
             solarSystem.SetActive(true);
             Vector3 _direction = (_pose.position - playerTransform.position).normalized;
             solarSystem.transform.position = playerTransform.position + _direction * 10.0f;
+            OnPlaceSolarSystem?.Invoke();
             ActiveUI();
             DisablePlanes();
         }
