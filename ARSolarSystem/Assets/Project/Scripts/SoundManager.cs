@@ -7,11 +7,14 @@ public class SoundManager : Singleton<SoundManager>
 {
     [SerializeField] AudioSource soundSource;
     [SerializeField] AudioSource musicSource;
+    [SerializeField] float globalVolume;
     bool soundIsToggle = false;
 
     private void Start()
     {
         soundSource = gameObject.AddComponent<AudioSource>();
+        soundSource.volume = globalVolume;
+        musicSource.volume = globalVolume;
     }
 
 

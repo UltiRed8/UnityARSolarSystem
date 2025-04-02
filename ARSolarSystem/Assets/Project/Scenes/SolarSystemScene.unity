@@ -2536,6 +2536,7 @@ MonoBehaviour:
   multiplier: 0.2
   maxTimeScale: 10
   timeScale: 0
+  placeSolarSystem: {fileID: 0}
 --- !u!4 &1128178778
 Transform:
   m_ObjectHideFlags: 0
@@ -2565,6 +2566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundSource: {fileID: 0}
   musicSource: {fileID: 1128178780}
+  globalVolume: 0.1
 --- !u!82 &1128178780
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2578,7 +2580,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 3d5d048d4a116a94da43297f9088ef1a, type: 3}
   m_Resource: {fileID: 8300000, guid: 3d5d048d4a116a94da43297f9088ef1a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.08
   m_Pitch: 1
   Loop: 1
   Mute: 0
