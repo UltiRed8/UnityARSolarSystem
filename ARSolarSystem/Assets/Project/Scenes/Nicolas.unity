@@ -9314,6 +9314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundSource: {fileID: 0}
   musicSource: {fileID: 1530337533}
+  globalVolume: 0
 --- !u!114 &1530337535
 MonoBehaviour:
   m_ObjectHideFlags: 0
