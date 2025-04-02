@@ -14,7 +14,8 @@ public class BackgroundButton : MonoBehaviour
     [SerializeField] RawImage darkIRLImage;
     [SerializeField] RawImage baseIRLImage;
 
-    [SerializeField] GameObject darkIRLbackground;
+    [SerializeField] GameObject darkIRLBackground;
+    [SerializeField] GameObject skyboxBackground;
 
     [SerializeField] int currentButton = 2;
 
@@ -64,16 +65,19 @@ public class BackgroundButton : MonoBehaviour
 
     void SetSkybox()
     {
-        darkIRLbackground.SetActive(false);
+        darkIRLBackground.SetActive(false);
+        skyboxBackground.SetActive(true);
     }
 
     void SetDarkIRl()
     {
-        darkIRLbackground.SetActive(true);
+        darkIRLBackground.SetActive(true);
+        skyboxBackground.SetActive(false);
     }
 
     void SetBaseIRl()
     {
-        darkIRLbackground.SetActive(false);
+        darkIRLBackground.SetActive(false);
+        skyboxBackground.SetActive(false);
     }
 }
