@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class BackgroundButton : MonoBehaviour
 {
+    [SerializeField] GameObject skyboxObject;
     [SerializeField] Button skybox;
     [SerializeField] Button darkIRL;
     [SerializeField] Button baseIRL;
@@ -17,7 +18,6 @@ public class BackgroundButton : MonoBehaviour
 
     [SerializeField] GameObject darkIRLbackground;
     [SerializeField] AudioResource soundToPlay;
-
 
     [SerializeField] int currentButton = 2;
 
@@ -69,15 +69,18 @@ public class BackgroundButton : MonoBehaviour
     void SetSkybox()
     {
         darkIRLbackground.SetActive(false);
+        skyboxObject.SetActive(true);
     }
 
     void SetDarkIRl()
     {
         darkIRLbackground.SetActive(true);
+        skyboxObject.SetActive(false);
     }
 
     void SetBaseIRl()
     {
         darkIRLbackground.SetActive(false);
+        skyboxObject.SetActive(false);
     }
 }
