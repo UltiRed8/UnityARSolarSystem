@@ -7966,6 +7966,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 797021524830292619, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
+      propertyPath: volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 797021524830292619, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
       propertyPath: soundToPlay
       value: 
       objectReference: {fileID: 8300000, guid: 033055295a2da3844bda611508f9a3b4, type: 3}
