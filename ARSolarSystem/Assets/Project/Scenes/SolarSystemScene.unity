@@ -904,11 +904,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1604549060}
   - {fileID: 1998310093}
   - {fileID: 159604640}
   - {fileID: 1853261767}
   - {fileID: 153026986}
-  - {fileID: 1604549060}
   m_Father: {fileID: 840276277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8099,6 +8099,11 @@ PrefabInstance:
       objectReference: {fileID: 1597320627}
     - target: {fileID: 4742325831777472911, guid: 11d4d18f78a9b474694b957984bb2443,
         type: 3}
+      propertyPath: place
+      value: 
+      objectReference: {fileID: 1853261768}
+    - target: {fileID: 4742325831777472911, guid: 11d4d18f78a9b474694b957984bb2443,
+        type: 3}
       propertyPath: interact
       value: 
       objectReference: {fileID: 164719859}
@@ -9372,6 +9377,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1853261766}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1853261768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5918831087921838274, guid: aa62917631d738240970bc4205901518,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853261766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573f12acb662fe24e85bd0543f64721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1945865109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1856687845478954, guid: ab152f61198d54532ae39108e616ff59,
