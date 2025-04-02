@@ -8408,6 +8408,16 @@ PrefabInstance:
       propertyPath: interact
       value: 
       objectReference: {fileID: 164719859}
+    - target: {fileID: 4742325831777472911, guid: 11d4d18f78a9b474694b957984bb2443,
+        type: 3}
+      propertyPath: 'tutoList.Array.data[0]'
+      value: Click on a planet to find out more about it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742325831777472911, guid: 11d4d18f78a9b474694b957984bb2443,
+        type: 3}
+      propertyPath: 'tutoList.Array.data[1]'
+      value: Simultaneously press and hold with two fingers to move forward.
+      objectReference: {fileID: 0}
     - target: {fileID: 5750818831709534395, guid: 11d4d18f78a9b474694b957984bb2443,
         type: 3}
       propertyPath: m_AnchorMax.x
