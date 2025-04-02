@@ -8,6 +8,7 @@ public class TutoUI : MonoBehaviour
     [SerializeField] List<string> tutoList = new List<string>();
     [SerializeField] TextMeshProUGUI textTuto;
     [SerializeField] InteractionBehaviour interact;
+    [SerializeField] PlayerMovement move;
     [SerializeField] int timeTuto;
     //[SerializeField] int currentTuto = 0;
 
@@ -44,14 +45,14 @@ public class TutoUI : MonoBehaviour
     void SecondTuto()
     {
         ChangeText(tutoList[1]);
-        interact.interactedWithPlanet += SwitchSecondTuto;
+        move.OnPlayerMovedForward += SwitchSecondTuto;
     }
 
-    void SwitchSecondTuto(PlanetInfo _info)
+    void SwitchSecondTuto()
     {
         HideTuto();
         Invoke("SecondTuto", timeTuto);
-        interact.interactedWithPlanet -= SwitchSecondTuto;
+        move.OnPlayerMovedForward -= SwitchSecondTuto;
 
     }
 }
