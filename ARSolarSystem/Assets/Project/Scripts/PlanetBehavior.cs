@@ -9,14 +9,15 @@ public class PlanetBehavior : MonoBehaviour
     [SerializeField] float angle = 0;
     [SerializeField] bool isRevert = false;
 
-    void EnableTrail()
-    {
-        GetComponent<TrailRenderer>().enabled = true;
-    }
-
     public void SetTimeScale(float _timeScale)
     {
         timeScale = _timeScale;
+        GetComponent<TrailRenderer>().enabled = true;
+    }
+
+    private void Awake()
+    {
+        GetComponent<TrailRenderer>().enabled = false;
     }
 
     private void Start()
@@ -78,6 +79,5 @@ public class PlanetBehavior : MonoBehaviour
         SetRadius(_multiplier);
         SetScaleMultiplier(_multiplier);
         SetTrailRenderScale(_multiplier);
-        EnableTrail();
     }
 }
