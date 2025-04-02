@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlanetBehavior : MonoBehaviour
 {
-    [SerializeField] float timeScale = 1f;
+    [SerializeField] float timeScale = 0.0f;
     [SerializeField] GameObject target;
     [SerializeField] float rotationSpeed = 10;
     [SerializeField] float radius = 10;
