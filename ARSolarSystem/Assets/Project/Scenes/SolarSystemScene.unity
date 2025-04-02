@@ -8013,7 +8013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 719171441}
   movementSpeed: 5
-  positionOffset: {x: 0, y: 2.5, z: 0}
+  positionOffset: {x: 0, y: 1, z: 0}
   interaction: {fileID: 164719859}
   inputs: {fileID: 1597320628}
   goingToTarget: 0

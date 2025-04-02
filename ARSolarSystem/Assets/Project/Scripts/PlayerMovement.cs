@@ -20,8 +20,15 @@ public class PlayerMovement : MonoBehaviour
             inputs.ClickedOnScreen += (ReadOnlyArray<InputTouch> _touches) => {
                 if (_touches.Count == 2)
                     MoveForward();
+                else if (_touches.Count == 3)
+                    Recenter();
             };
         }
+    }
+
+    public void Recenter()
+    {
+
     }
 
     public void SetTarget(Transform _newTarget)
