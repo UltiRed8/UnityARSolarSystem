@@ -77,7 +77,7 @@ public class SelectPosSolarSystem : MonoBehaviour
     void DisablePlanes()
     {
         foreach (ARPlane _plane in planeManager.trackables)
-            Destroy(_plane);
+            _plane.gameObject.SetActive(false);
         Destroy(planeManager);
     }
 }
