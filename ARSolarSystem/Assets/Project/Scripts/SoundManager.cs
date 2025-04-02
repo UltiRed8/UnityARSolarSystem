@@ -30,9 +30,10 @@ public class SoundManager : Singleton<SoundManager>
         else musicSource.Stop();
     }
 
-    public void PlaySound(AudioResource _source)
+    public void PlaySound(AudioResource _source, float _overrideVolume = -1.0f)
     {
         if (soundIsToggle) return;
+        soundSource.volume = _overrideVolume == -1.0f ? globalVolume : _overrideVolume;
         soundSource.resource = _source;
         soundSource.Play();
     }
