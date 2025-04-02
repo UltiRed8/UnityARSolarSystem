@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
+using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class InteractionBehaviour : MonoBehaviour
 {
@@ -8,26 +9,25 @@ public class InteractionBehaviour : MonoBehaviour
     public event Action<PlanetInfo> interactedWithPlanet = null;
 
     [SerializeField] Camera playerCamera = null;
-    [SerializeField] IAA_Player inputs;
-    [SerializeField] InputAction interactAction;
+    [SerializeField] InputSystem inputs = null;
     [SerializeField] LayerMask layerToDetect;
 
-    private void Awake()
+    private void Start()
     {
-        inputs = new IAA_Player();
-        interactAction = inputs.Player.Interact;
-        interactAction.Enable();
-        interactAction.performed += Interact;
+        if (inputs)
+        {
+            inputs.ClickedOnScreen += (ReadOnlyArray<InputTouch> _touches) => {
+                if (_touches.Count == 1)
+                    Interact(_touches[0].screenPosition);
+            };
+        }
     }
 
-    public void Interact(InputAction.CallbackContext _context)
+    public void Interact(Vector2 _hitPosition)
     {
-        Vector2 _hitPosition = _context.ReadValue<Vector2>();
         Ray _ray = playerCamera.ScreenPointToRay(_hitPosition);
         if (Physics.Raycast(_ray, out RaycastHit _hit, 1000.0f, layerToDetect))
         {
-            Debug.Log("AAAAAA");
-            //_hit.collider.gameObject.SetActive(false);
             interactedWithGameObject?.Invoke(_hit.collider.gameObject);
             PlanetInfo _info = _hit.collider.gameObject.GetComponent<PlanetInfo>();
             interactedWithPlanet?.Invoke(_info);
