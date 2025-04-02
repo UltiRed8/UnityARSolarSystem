@@ -14,6 +14,7 @@ public class PlanetManager : Singleton<PlanetManager>
     private void Start()
     {
         Invoke(nameof(Apply),0.0f);
+        SetTimeScale(20);
     }
 
     void Apply()
