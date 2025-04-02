@@ -11,6 +11,7 @@ public class SelectPosSolarSystem : MonoBehaviour
     [SerializeField] ARRaycastManager raycastManager;
     [SerializeField] GameObject solarSystem;
     [SerializeField] List<GameObject> allUIToActive;
+    [SerializeField] Transform playerTransform;
 
     private bool IsValid => planeManager && raycastManager && solarSystem;
 
@@ -53,7 +54,8 @@ public class SelectPosSolarSystem : MonoBehaviour
         {
             Pose _pose = _outResults[0].pose; // Pose = equivalent du hitLocation sur unreal
             solarSystem.SetActive(true);
-            solarSystem.transform.position = _touchPosition;
+            Vector3 _direction = (_pose.position - playerTransform.position).normalized;
+            solarSystem.transform.position = playerTransform.position + _direction * 10.0f;
             ActiveUI();
         }
     }

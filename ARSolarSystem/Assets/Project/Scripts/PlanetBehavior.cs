@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.InputSystem.OnScreen.OnScreenStick;
 
 public class PlanetBehavior : MonoBehaviour
 {
@@ -12,11 +9,15 @@ public class PlanetBehavior : MonoBehaviour
     [SerializeField] float angle = 0;
     [SerializeField] bool isRevert = false;
 
+    void EnableTrail()
+    {
+        GetComponent<TrailRenderer>().enabled = true;
+    }
+
     public void SetTimeScale(float _timeScale)
     {
         timeScale = _timeScale;
     }
-
 
     private void Start()
     {
@@ -72,16 +73,11 @@ public class PlanetBehavior : MonoBehaviour
         GetComponent<TrailRenderer>().widthMultiplier *= _multiplier;
     }
 
-    void EnableTrail()
-    {
-        GetComponent<TrailRenderer>().enabled = true;
-    }
-
     public void UpdateWithMultiplier(float _multiplier)
     {
         SetRadius(_multiplier);
         SetScaleMultiplier(_multiplier);
         SetTrailRenderScale(_multiplier);
-        Invoke(nameof(EnableTrail),0.1f);
+        EnableTrail();
     }
 }

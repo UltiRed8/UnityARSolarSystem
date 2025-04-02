@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlanetInfoUI : MonoBehaviour
 {
+    public event Action OnUIClosed = null;
+
     [SerializeField] TextMeshProUGUI planetNameText;
     [SerializeField] TextMeshProUGUI planetSizeText;
     [SerializeField] TextMeshProUGUI SunDistValueText;
@@ -58,6 +59,7 @@ public class PlanetInfoUI : MonoBehaviour
 
     void RemoveUI()
     {
+        OnUIClosed?.Invoke();
         gameObject.SetActive(false);
     }
 }

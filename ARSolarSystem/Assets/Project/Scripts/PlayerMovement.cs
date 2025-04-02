@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
 using InputTouch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public event Action OnPlayerMovedForward = null;
+
     [SerializeField] private Transform target = null;
     [SerializeField] private float movementSpeed = 1.0f;
     [SerializeField] private Vector3 positionOffset = Vector3.zero;
@@ -11,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private InputSystem inputs = null;
     [SerializeField] private bool goingToTarget = false;
     [SerializeField] private Transform forwardTransform = null;
+    [SerializeField] private PlanetInfoUI infoUI = null;
 
     private void Start()
     {
@@ -24,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
                     Recenter();
             };
         }
+        if (infoUI)
+            infoUI.OnUIClosed += StopFollowing;
     }
 
     public void Recenter()
@@ -43,13 +49,17 @@ public class PlayerMovement : MonoBehaviour
             return;
         Vector3 _newPosition = Vector3.MoveTowards(transform.position, target.position + positionOffset, Time.deltaTime * movementSpeed);
         transform.position = _newPosition;
-        if (Vector3.Distance(_newPosition, target.position) < 0.1f)
-            goingToTarget = false;
+    }
+
+    private void StopFollowing()
+    {
+        goingToTarget = false;
     }
 
     private void MoveForward()
     {
         Vector3 _newPosition = transform.position + forwardTransform.forward * Time.deltaTime * movementSpeed;
         transform.position = _newPosition;
+        OnPlayerMovedForward?.Invoke();
     }
 }

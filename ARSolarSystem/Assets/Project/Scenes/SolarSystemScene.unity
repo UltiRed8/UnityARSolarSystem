@@ -8026,12 +8026,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 719171441}
-  movementSpeed: 5
-  positionOffset: {x: 0, y: 1, z: 0}
+  movementSpeed: 10
+  positionOffset: {x: 0, y: 2, z: 0}
   interaction: {fileID: 164719859}
   inputs: {fileID: 1597320628}
   goingToTarget: 0
   forwardTransform: {fileID: 164719851}
+  infoUI: {fileID: 1998310094}
 --- !u!114 &1597320628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9112,6 +9113,11 @@ PrefabInstance:
       objectReference: {fileID: 1597320629}
     - target: {fileID: 5918831087921838274, guid: aa62917631d738240970bc4205901518,
         type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 164719851}
+    - target: {fileID: 5918831087921838274, guid: aa62917631d738240970bc4205901518,
+        type: 3}
       propertyPath: allUIToActive.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -9331,6 +9337,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1998310092}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1998310094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6619470084690963107, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998310092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7846dabe6a14e714d91cfac2aca8c672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2044581947
 GameObject:
   m_ObjectHideFlags: 0
