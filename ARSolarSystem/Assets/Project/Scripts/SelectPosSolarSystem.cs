@@ -53,7 +53,7 @@ public class SelectPosSolarSystem : MonoBehaviour
         {
             Pose _pose = _outResults[0].pose; // Pose = equivalent du hitLocation sur unreal
             solarSystem.SetActive(true);
-            solarSystem.transform.position = _touchPosition;
+            solarSystem.transform.position = _pose.position;
             ActiveUI();
         }
     }
