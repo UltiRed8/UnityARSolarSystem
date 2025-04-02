@@ -18,7 +18,8 @@ public class InteractionBehaviour : MonoBehaviour
         {
             inputs.ClickedOnScreen += (ReadOnlyArray<InputTouch> _touches) => {
                 if (_touches.Count == 1)
-                    Interact(_touches[0].screenPosition);
+                    if (_touches[0].began)
+                        Interact(_touches[0].screenPosition);
             };
         }
     }
