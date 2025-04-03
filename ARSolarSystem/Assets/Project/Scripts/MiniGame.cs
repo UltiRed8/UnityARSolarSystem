@@ -70,7 +70,10 @@ public class MiniGame : MonoBehaviour
 
         foreach (ARTrackedImage _trackedImage in _image.added)
         {
-            if(_trackedImage.referenceImage.name == currentQuestionIndex.ToString())
+            int.TryParse(_trackedImage.referenceImage.name,out int _indexAnswer);
+            answerImage.texture = answersImages[_indexAnswer];
+
+            if (_trackedImage.referenceImage.name == currentQuestionIndex.ToString())
             {
                 Success();
                 return;
