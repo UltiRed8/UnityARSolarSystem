@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class PlanetInfoUI : MonoBehaviour
@@ -15,6 +16,7 @@ public class PlanetInfoUI : MonoBehaviour
     [SerializeField] InteractionBehaviour intract;
     [SerializeField] Button removeButton;
     [SerializeField] PlanetSelectorBehavior planetSelector = null;
+    [SerializeField] AudioResource buttonClickSound = null;
 
     public PlanetInfo PlanetInfo {  get { return planetInfo; } set { planetInfo = value; } }
 
@@ -72,6 +74,7 @@ public class PlanetInfoUI : MonoBehaviour
 
     void RemoveUI()
     {
+        SoundManager.Instance.PlaySound(buttonClickSound);
         OnUIClosed?.Invoke();
         gameObject.SetActive(false);
     }

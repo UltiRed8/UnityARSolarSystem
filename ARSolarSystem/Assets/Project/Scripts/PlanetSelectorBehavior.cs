@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlanetSelectorBehavior : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlanetSelectorBehavior : MonoBehaviour
     [SerializeField] List<GameObject> gameObjectsToSelect = new List<GameObject>();
     [SerializeField] InteractionBehaviour interaction = null;
     [SerializeField] PlayerMovement movement = null;
+    [SerializeField] AudioResource buttonClickSound = null;
 
     private void Start()
     {
@@ -17,6 +19,7 @@ public class PlanetSelectorBehavior : MonoBehaviour
 
     private void SelectionChanged(int _index)
     {
+        SoundManager.Instance.PlaySound(buttonClickSound);
         if (gameObjectsToSelect.Count < _index)
             return;
         if (!interaction)

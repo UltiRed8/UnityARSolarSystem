@@ -10105,6 +10105,11 @@ PrefabInstance:
       propertyPath: planetSelector
       value: 
       objectReference: {fileID: 8671982622906393608}
+    - target: {fileID: 6619470084690963107, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
+        type: 3}
+      propertyPath: buttonClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
     - target: {fileID: 7216685923320075078, guid: b1be09da6b168cf4cbb8fa9ca75f227e,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -10272,6 +10277,11 @@ PrefabInstance:
       propertyPath: interaction
       value: 
       objectReference: {fileID: 164719859}
+    - target: {fileID: 1553236665964127131, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
+        type: 3}
+      propertyPath: buttonClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
     - target: {fileID: 1553236665964127131, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
         type: 3}
       propertyPath: 'gameObjectsToSelect.Array.data[1]'
