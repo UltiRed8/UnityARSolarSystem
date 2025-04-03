@@ -8341,6 +8341,8 @@ MonoBehaviour:
   goingToTarget: 0
   forwardTransform: {fileID: 164719851}
   infoUI: {fileID: 1998310094}
+  cameraGameObject: {fileID: 164719850}
+  solarSystem: {fileID: 170652773}
 --- !u!114 &1597320628
 MonoBehaviour:
   m_ObjectHideFlags: 0
