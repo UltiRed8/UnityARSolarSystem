@@ -12,6 +12,7 @@ public class MiniGamePanelBehavior : MonoBehaviour
     [SerializeField] TMP_Text lastScoreText = null;
     [SerializeField] TMP_Text bestScoreText = null;
     [SerializeField] AudioResource buttonPressSound = null;
+    [SerializeField] GameObject settingsPanel = null;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class MiniGamePanelBehavior : MonoBehaviour
         SoundManager.Instance.PlaySound(buttonPressSound);
         miniGame.gameObject.SetActive(true);
         miniGame.StartGame();
+        settingsPanel.SetActive(false);
     }
 
     private void ResetScore()

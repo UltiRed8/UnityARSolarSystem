@@ -2155,6 +2155,11 @@ PrefabInstance:
       propertyPath: darkIRLbackground
       value: 
       objectReference: {fileID: 1075732300}
+    - target: {fileID: 3620945746962966463, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4634189271524716441, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
       propertyPath: save
@@ -2165,6 +2170,11 @@ PrefabInstance:
       propertyPath: miniGame
       value: 
       objectReference: {fileID: 1468434187}
+    - target: {fileID: 4634189271524716441, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: settingsPanel
+      value: 
+      objectReference: {fileID: 768091884}
     - target: {fileID: 5240547961253447293, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
       propertyPath: m_Name
@@ -7939,6 +7949,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 392033672}
     m_Modifications:
+    - target: {fileID: 820920282298498476, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2501217302274759139, guid: 67c881b994f9b3a40bfd89b4a7181087,
         type: 3}
       propertyPath: m_Name
@@ -7956,9 +7971,34 @@ PrefabInstance:
       objectReference: {fileID: 1128178781}
     - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
         type: 3}
+      propertyPath: delay
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1597320626}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: session
+      value: 
+      objectReference: {fileID: 2044581950}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: failedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 158bcd8f1d5db764c878f62c516414e3, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: successSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 40f9c6bf9f852a14ab5aa49b1f3bfc9f, type: 3}
+    - target: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: delayBetweenQuestions
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7979396696572240575, guid: 67c881b994f9b3a40bfd89b4a7181087,
         type: 3}
       propertyPath: m_Pivot.x
@@ -8058,6 +8098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016644776758575368, guid: 67c881b994f9b3a40bfd89b4a7181087,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
