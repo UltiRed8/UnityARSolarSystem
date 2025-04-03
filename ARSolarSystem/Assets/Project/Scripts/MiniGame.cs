@@ -21,6 +21,7 @@ public class MiniGame : MonoBehaviour
     [SerializeField] AudioResource successSound = null;
     [SerializeField] AudioResource failedSound = null;
     [SerializeField] ARSession session = null;
+    [SerializeField] GameObject settingsMenu = null;
 
     //Detection
     [SerializeField] ARTrackedImageManager manager;
@@ -65,6 +66,7 @@ public class MiniGame : MonoBehaviour
         currentQuestionIndex = Random.Range(0, questionsImages.Count - 1);
         questionImage.texture = questionsImages[currentQuestionIndex];
         answerImage.texture = null;
+        answerImage.enabled = false;
         hasAnswered = false;
         Debug.Log("DEBUG GAME ===> NEXT QUESTION = " + questionsImages[currentQuestionIndex].name);
     }
@@ -77,6 +79,12 @@ public class MiniGame : MonoBehaviour
             manager.trackedImagesChanged -= CheckAnswer;
         isGameRunning = false;
         gameObject.SetActive(false);
+        Screen.orientation = ScreenOrientation.Portrait;
+        if (settingsMenu)
+        {
+            settingsMenu.SetActive(true);
+            settingsMenu.GetComponentInChildren<MiniGamePanelBehavior>().ResetGame();
+        }
     }
 
     private void CheckAnswer(ARTrackedImagesChangedEventArgs _image)
@@ -106,6 +114,7 @@ public class MiniGame : MonoBehaviour
             {
                 if (int.TryParse(_pair.Key, out int _indexAnswer))
                 {
+                    answerImage.enabled = true;
                     answerImage.texture = answersImages[_indexAnswer];
                     Debug.Log("DEBUG GAME ===> " + answersImages[_indexAnswer].name);
                     if (_indexAnswer == currentQuestionIndex) Success();

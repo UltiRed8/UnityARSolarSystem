@@ -2,17 +2,27 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 public class MiniGamePanelBehavior : MonoBehaviour
 {
     [SerializeField] MiniGameSave save = null;
     [SerializeField] Button playButton = null;
     [SerializeField] Button resetButton = null;
-    [SerializeField] MiniGame miniGame = null;
+    [SerializeField] RotationUIBehavior miniGame = null;
     [SerializeField] TMP_Text lastScoreText = null;
     [SerializeField] TMP_Text bestScoreText = null;
     [SerializeField] AudioResource buttonPressSound = null;
     [SerializeField] GameObject settingsPanel = null;
+
+    [SerializeField] GameObject particles = null;
+    [SerializeField] GameObject solarSystem = null;
+    [SerializeField] GameObject skybox = null;
+    [SerializeField] GameObject darkIrlBackground = null;
+    [SerializeField] GameObject tutorialMenu = null;
+
+    bool skyboxActive = false;
+    bool darkIrlBackgroundActive = false;
 
     private void Start()
     {
@@ -38,8 +48,8 @@ public class MiniGamePanelBehavior : MonoBehaviour
     private void Play()
     {
         SoundManager.Instance.PlaySound(buttonPressSound);
+        PrepareGame();
         miniGame.gameObject.SetActive(true);
-        miniGame.StartGame();
         settingsPanel.SetActive(false);
     }
 
@@ -50,5 +60,25 @@ public class MiniGamePanelBehavior : MonoBehaviour
             return;
         save.SetNewScore(0);
         UpdateTexts();
+    }
+
+    private void PrepareGame()
+    {
+        skyboxActive = skybox.activeInHierarchy;
+        darkIrlBackgroundActive = darkIrlBackground.activeInHierarchy;
+        particles.SetActive(false);
+        solarSystem.SetActive(false);
+        skybox.SetActive(false);
+        darkIrlBackground.SetActive(false);
+        tutorialMenu.SetActive(false);
+    }
+
+    public void ResetGame()
+    {
+        particles.SetActive(true);
+        solarSystem.SetActive(true);
+        tutorialMenu.SetActive(true);
+        skybox.SetActive(skyboxActive);
+        darkIrlBackground.SetActive(darkIrlBackgroundActive);
     }
 }

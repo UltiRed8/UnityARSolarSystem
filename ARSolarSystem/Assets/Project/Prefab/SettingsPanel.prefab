@@ -1730,6 +1730,7 @@ MonoBehaviour:
   lastScoreText: {fileID: 5254251833976014471}
   bestScoreText: {fileID: 3893602378471270825}
   buttonPressSound: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
+  settingsPanel: {fileID: 5240547961253447293}
 --- !u!1 &7129358688979945264
 GameObject:
   m_ObjectHideFlags: 0
