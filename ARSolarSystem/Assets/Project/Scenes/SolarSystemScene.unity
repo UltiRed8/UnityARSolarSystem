@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &153026986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10262,11 +10262,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelUIPlanetSelect
       objectReference: {fileID: 0}
-    - target: {fileID: 444241970678599822, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1553236665964127131, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
         type: 3}
       propertyPath: movement
@@ -10277,11 +10272,6 @@ PrefabInstance:
       propertyPath: interaction
       value: 
       objectReference: {fileID: 164719859}
-    - target: {fileID: 1553236665964127131, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: buttonClickSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
     - target: {fileID: 1553236665964127131, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
         type: 3}
       propertyPath: 'gameObjectsToSelect.Array.data[1]'
@@ -10322,21 +10312,6 @@ PrefabInstance:
       propertyPath: 'gameObjectsToSelect.Array.data[8]'
       value: 
       objectReference: {fileID: 473810022}
-    - target: {fileID: 2642683047214300032, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 540
-      objectReference: {fileID: 0}
-    - target: {fileID: 3359122709765039079, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5015060267049932850, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 6585398432316271091, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10436,16 +10411,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7819357176321786166, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7819357176321786166, guid: f96af1e9c27ec8d4b8d9e0cceb163bde,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

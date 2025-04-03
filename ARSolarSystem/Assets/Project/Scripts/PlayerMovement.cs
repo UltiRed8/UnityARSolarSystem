@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform forwardTransform = null;
     [SerializeField] private PlanetInfoUI infoUI = null;
 
+    [SerializeField] private GameObject cameraGameObject = null;
+    [SerializeField] private GameObject solarSystem = null;
+
     private void Start()
     {
         interaction.interactedWithGameObject += (GameObject _object) => SetTarget(_object.transform);
@@ -34,7 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Recenter()
     {
-
+        cameraGameObject.transform.position = transform.position;
+        solarSystem.transform.position = transform.position;
     }
 
     public void SetTarget(Transform _newTarget)
