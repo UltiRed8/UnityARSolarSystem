@@ -12,6 +12,13 @@ public class InteractionBehaviour : MonoBehaviour
     [SerializeField] InputSystem inputs = null;
     [SerializeField] LayerMask layerToDetect;
 
+    public void SimulateClick(GameObject _object)
+    {
+        interactedWithGameObject?.Invoke(_object);
+        PlanetInfo _info = _object.GetComponent<PlanetInfo>();
+        interactedWithPlanet?.Invoke(_info);
+    }
+
     private void Start()
     {
         if (inputs)

@@ -14,8 +14,21 @@ public class PlanetInfoUI : MonoBehaviour
     [SerializeField] PlanetInfo planetInfo;
     [SerializeField] InteractionBehaviour intract;
     [SerializeField] Button removeButton;
+    [SerializeField] PlanetSelectorBehavior planetSelector = null;
 
     public PlanetInfo PlanetInfo {  get { return planetInfo; } set { planetInfo = value; } }
+
+    private void OnEnable()
+    {
+        if (planetSelector)
+            planetSelector.gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        if (planetSelector)
+            planetSelector.gameObject.SetActive(true);
+    }
 
     private void Start()
     {
