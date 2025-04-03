@@ -2155,15 +2155,20 @@ PrefabInstance:
       propertyPath: darkIRLbackground
       value: 
       objectReference: {fileID: 1075732300}
+    - target: {fileID: 4634189271524716441, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 1128178781}
+    - target: {fileID: 4634189271524716441, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: miniGame
+      value: 
+      objectReference: {fileID: 1468434187}
     - target: {fileID: 5240547961253447293, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
       propertyPath: m_Name
       value: SettingsPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5240547961253447293, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8159962577759779262, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
@@ -8065,6 +8070,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1468434185}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1468434187 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4070136349627473932, guid: 67c881b994f9b3a40bfd89b4a7181087,
+    type: 3}
+  m_PrefabInstance: {fileID: 1468434185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225c5b1de8139c84ca28c3cc97ca2087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1582914530
 GameObject:
   m_ObjectHideFlags: 0

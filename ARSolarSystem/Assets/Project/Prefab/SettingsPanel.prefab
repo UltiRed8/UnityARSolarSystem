@@ -1428,7 +1428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2576372852532475681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1727,9 +1727,9 @@ MonoBehaviour:
   playButton: {fileID: 104858817267766211}
   resetButton: {fileID: 4207686685755754064}
   miniGame: {fileID: 0}
-  lastScoreText: {fileID: 0}
-  bestScoreText: {fileID: 0}
-  buttonPressSound: {fileID: 0}
+  lastScoreText: {fileID: 5254251833976014471}
+  bestScoreText: {fileID: 3893602378471270825}
+  buttonPressSound: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
 --- !u!1 &7129358688979945264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,8 +2866,8 @@ MonoBehaviour:
   button: {fileID: 0}
   panelToOpen: {fileID: 0}
   panelsToClose: []
-  soundToPlay: {fileID: 8300000, guid: 033055295a2da3844bda611508f9a3b4, type: 3}
-  volume: 0.5
+  soundToPlay: {fileID: 8300000, guid: 44bba2c37c53c6e47a4bbdab73f7ddd0, type: 3}
+  volume: 0.25
 --- !u!114 &8159962577759779262
 MonoBehaviour:
   m_ObjectHideFlags: 0

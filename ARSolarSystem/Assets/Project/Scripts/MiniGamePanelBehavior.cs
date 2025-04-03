@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -8,8 +9,8 @@ public class MiniGamePanelBehavior : MonoBehaviour
     [SerializeField] Button playButton = null;
     [SerializeField] Button resetButton = null;
     [SerializeField] MiniGame miniGame = null;
-    [SerializeField] Text lastScoreText = null;
-    [SerializeField] Text bestScoreText = null;
+    [SerializeField] TMP_Text lastScoreText = null;
+    [SerializeField] TMP_Text bestScoreText = null;
     [SerializeField] AudioResource buttonPressSound = null;
 
     private void Start()
