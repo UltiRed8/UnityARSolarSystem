@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &153026986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2159,6 +2159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SettingsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5240547961253447293, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8159962577759779262, guid: 811cd6bbf08ef3749a51a5adbaa877e9,
         type: 3}
